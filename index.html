@@ -6,19 +6,19 @@
   <meta name="description" content="Интерактивный UI Kit опросов: светлая и тёмная СКОЛКА, ВДЕЛЕ. Диаграммы, формы и компоненты.">
   <meta name="color-scheme" content="light">
   <title>СКОЛКА · UI Kit опросов</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=0.3">
   <script src="./echarts.min.js" defer></script>
-  <script src="./app.js?v=0.2" defer></script>
+  <script src="./app.js?v=0.3" defer></script>
 </head>
 <body>
   <a class="skip" href="#workspace">Перейти к примерам</a>
-  <header class="kit-header"><a class="kit-brand" href="./">СКОЛКА<span>EVENTS / UI KIT</span></a><span class="version">Проект для согласования <span class="version-dot"></span> v0.2</span></header>
+  <header class="kit-header"><a class="kit-brand" href="./"><img src="./logo-skolca.png" alt="СКОЛКА"></a></header>
   <main class="kit-main">
-    <div class="intro"><div><span class="eyebrow">Одна система · три темы</span><h1>Оформление опросов</h1><p>Выберите тему и посмотрите, как она работает на экранах и компонентах.</p></div><span class="intro-date">30 октября 2026</span></div>
+    <div class="intro"><h1>Оформление опросов</h1></div>
     <div id="themes" class="theme-list" aria-label="Темы оформления"></div>
     <nav class="kit-nav" aria-label="Разделы UI Kit"><button type="button" data-view="diagrams">Диаграммы</button><button type="button" data-view="participant">Опрос участника</button><button type="button" data-view="components">Компоненты</button><button type="button" data-view="tokens">Палитра</button></nav>
     <section id="workspace" class="workspace" aria-label="Примеры интерфейса"></section>
-    <footer class="kit-footer"><span>Демонстрационные данные. Страница не подключена к рабочей системе опросов.</span><span>СКОЛКА / ВДЕЛЕ</span></footer>
+
   </main>
   <dialog id="theme-dialog" class="theme-dialog" aria-labelledby="theme-dialog-title"></dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
