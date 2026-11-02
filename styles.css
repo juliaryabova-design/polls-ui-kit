@@ -10,3 +10,5 @@
 
 .stage[data-conversation=true] .session-title{color:var(--title)}.product-top img.people-vdele-logo{width:132px;height:53px;object-position:right;flex:none}.stage[data-conversation=true]>.stage-foot{background:#110f0a;border-radius:6px;padding:8px 10px}
 @media(max-width:650px){.product-top img.people-vdele-logo{width:100px;height:40px}.stage[data-conversation=true] .product-top img.school-white{width:125px}}
+
+.kit-nav a.timer-reference-link{font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;color:#677386;padding:0 0 14px;line-height:normal}@media(max-width:650px){.kit-nav a.timer-reference-link{font-size:12px}}

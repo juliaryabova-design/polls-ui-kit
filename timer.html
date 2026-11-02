@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Таймер в сценарии · СКОЛКА</title><link rel="stylesheet" href="./timer.css?v=1"><script src="./timer.js?v=1" defer></script></head>
+<body>
+<header class="reference-header"><a href="./"><img src="./logo-skolca.png" alt="СКОЛКА"></a><a class="back-kit" href="./">← UI Kit</a></header>
+<main class="reference-main">
+<div class="reference-title"><h1>Таймер в сценарии</h1><p>Интерактивный референс для планшета модератора</p></div>
+<div class="reference-controls"><div class="role-switch" aria-label="Посмотреть роль"><button type="button" data-role="moderator" aria-pressed="true">Модератор</button><button type="button" data-role="admin" aria-pressed="false">Администратор</button></div><label>Проверить состояние<select id="preview-state"><option value="idle">До старта</option><option value="running">Идёт отсчёт</option><option value="half">Половина сессии</option><option value="warning">Пора подводить итоги</option><option value="overrun">Время вышло · +02:15</option><option value="paused">Пауза</option></select></label><button type="button" class="reset-demo" id="reset-demo">Сбросить пример</button></div>
+<div class="reference-layout" id="layout">
+<section class="scenario-frame" aria-label="Пример экрана сценария">
+<div class="scenario-top"><img src="./logo-skolca.png" alt="СКОЛКА"><span>Пример сценария</span></div>
+<div class="scenario-heading"><a class="scenario-back" href="./">← Сценарии</a><h2>Открытый разговор</h2><p id="stage-caption">Этап 1 из 2: Программа дня</p><nav class="stage-switch" aria-label="Этапы сценария"><button type="button" data-stage="1" aria-label="Программа дня" aria-current="step">1</button><button type="button" data-stage="2" aria-label="Саммери">2</button></nav></div>
+<div class="timer-sticky"><section class="timer-card" id="timer-card" data-tone="normal" aria-label="Таймер секции">
+<div class="timer-top"><div class="timer-heading"><span class="timer-eyebrow">Секция</span><h3 id="session-name">Открытый разговор</h3><span class="timer-status" id="timer-status">Не запущен</span></div><div class="time-group"><span class="time-caption" id="time-caption">Длительность</span><span class="time-value" id="time-value" role="timer" aria-live="off">30:00</span></div><div class="start-wrap" id="start-wrap"><button class="primary" type="button" id="start-timer">Старт</button></div></div>
+<div class="timer-meta"><span id="timer-context">Начните отсчёт в момент начала секции</span><span id="duration-caption">План: 30 мин</span></div><div class="timer-progress" role="progressbar" aria-label="Прошло времени секции" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progress-fill"></span></div>
+<div class="timer-actions" id="timer-actions" hidden><button type="button" id="pause-timer">Пауза</button><button type="button" id="add-time">+5 минут</button><button type="button" class="finish" id="finish-timer">Завершить</button></div>
+<div class="timer-notice" id="timer-notice" hidden><span class="notice-symbol" id="notice-symbol" aria-hidden="true">i</span><div><strong id="notice-title"></strong><p id="notice-text"></p></div><button type="button" id="close-notice" aria-label="Закрыть уведомление">×</button></div>
+</section></div>
+<article class="script-card" id="script-card"></article>
+<div class="stage-navigation"><button type="button" id="previous-stage" disabled>← Предыдущий этап</button><button type="button" id="next-stage">Следующий этап →</button></div>
+</section>
+<aside class="settings-card" id="settings-card" hidden><h2>Настройки в админке</h2><form id="timer-settings"><label>Название секции<input id="section-input" value="Открытый разговор" maxlength="80" required></label><label>Длительность, мин<input id="duration-input" type="number" value="30" min="1" max="1440" step="1" required></label><label class="check-label"><input id="half-input" type="checkbox" checked>Уведомить на половине</label><label class="check-label"><input id="warning-input" type="checkbox" checked>Напомнить о завершении</label><label>Предупредить за, мин<input id="warning-minutes" type="number" value="5" min="0.5" step="0.5" required></label><button class="primary" type="submit">Сохранить настройки</button><p class="settings-help">Длительность и предупреждения задаются до старта. Во время сессии можно добавить 5 минут.</p><p class="form-error" id="settings-error" role="status"></p></form></aside>
+</div>
+<p class="reference-foot">Прототип для согласования. Управление и роли показаны в одном браузере; рабочие сценарии не изменяются.</p>
+</main><div id="announcement" class="sr-only" role="status" aria-live="polite"></div><div id="timer-toast" class="toast" role="status"></div>
+</body></html>
